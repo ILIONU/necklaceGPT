@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>목걸이 판매 사이트</title>
+  <!-- 부트스트랩 CDN 추가 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    .card-img-top:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">목걸이 판매 사이트</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">홈 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">상품</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">주문하기</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">고객센터</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://wingbling.co.kr/web/product/big/202102/3522fa99b6c76fda13171df23b640ac7.jpg" class="card-img-top" alt="목걸이 이미지">
+        <div class="card-body">
+          <h5 class="card-title">고급 목걸이</h5>
+          <p class="card-text">이 목걸이는 고급 소재로 제작되었습니다.</p>
+          <p class="card-text">가격: $100</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
+            </div>
+            <input type="text" class="form-control quantity-input" value="1" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">주문하기</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 추가 상품 카드 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://m.wingbling.co.kr/web/product/big/202109/3fdc986776bfbb1b0e6a0f46d5bae50b.jpg" class="card-img-top" alt="목걸이 이미지">
+        <div class="card-body">
+          <h5 class="card-title">이색적인 목걸이</h5>
+          <p class="card-text">독특한 디자인으로 주목받는 목걸이입니다.</p>
+          <p class="card-text">가격: $80</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
+            </div>
+            <input type="text" class="form-control quantity-input" value="1" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">주문하기</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 추가 상품 카드 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://item.elandrs.com/upload/prd/orgimg/106/2202244106_0000007.jpg?w=750&h=&q=100" class="card-img-top" alt="목걸이 이미지">
+        <div class="card-body">
+          <h5 class="card-title">클래식한 목걸이</h5>
+          <p class="card-text">고전적인 스타일의 목걸이입니다.</p>
+          <p class="card-text">가격: $120</p>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
+            </div>
+            <input type="text" class="form-control quantity-input" value="1" readonly>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary">주문하기</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 부트스트랩 JS 및 Popper.js, jQuery CDN 추가 -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-1qzAIk+vnLlEaoQv8Z1GGt5kgfkg+uy5C3q1RzM6JpIb6AgFd1ghsP3SXR76NMMw" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+  function incrementQuantity() {
+    var inputElement = event.target.closest('.card-body').querySelector('.quantity-input');
+    var currentValue = parseInt(inputElement.value);
+    inputElement.value = currentValue + 1;
+  }
+
+  function decrementQuantity() {
+    var inputElement = event.target.closest('.card-body').querySelector('.quantity-input');
+    var currentValue = parseInt(inputElement.value);
+    if (currentValue > 1) {
+      inputElement.value = currentValue - 1;
+    }
+  }
+</script>
+
+</body>
+</html>
